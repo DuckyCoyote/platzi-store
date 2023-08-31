@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -18,10 +18,5 @@ export class AppController {
   @Get('/nuevito/')
   nuevito(): string {
     return 'Yo soy un nuevito EndPoint!';
-  }
-  
-  @Get('products/:id')
-  getProduct(@Param() params: any) {
-    return `Product ${params.id}`;
   }
 }
